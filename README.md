@@ -12,4 +12,7 @@ prenant ce médicament au quotidien.
 
 Libarie et framework utilisé :
 - [nuxtJS](https://nuxt.com/)
-- [Sass](https://sass-lang.com/)
+- [Sass](https://sass-lang.com/) :
+
+aide externe : 
+- [chatGPT](https://chatgpt.com/) pour le contenu du site
