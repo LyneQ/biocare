@@ -1,0 +1,20 @@
+@use "assets/scss/var.scss" as *;
+body, html {
+  margin: 0;
+  padding: 0;
+
+  background-color: $backgroundColorLighter;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: initial;
+  font-style: normal;
+  color: $fontColor;
+}
+
+a {
+  color: $fontColor;
+
+  &:hover {
+    color: $mainColorVif;
+  }
+}
