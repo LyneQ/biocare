@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "name": "EnerBoost",
+      "description": "EnerBoost est un remède révolutionnaire développé par nos soins. Ce médicament est spécialement conçu pour combattre la fatigue chronique et améliorer la capacité de concentration des individus. Grâce à une formule unique et avancée, EnerBoost agit directement sur les systèmes énergétiques du corps, procurant un regain d'énergie durable et une clarté mentale optimale. Les utilisateurs de EnerBoost rapportent une amélioration significative de leur productivité et une réduction des sensations de fatigue tout au long de la journée.",
+      "imageUrl": "https://picsum.photos/200",
+      "price": 49.99,
+      "priceDescription": "EnerBoost est disponible au prix de 49,99 € pour une boîte de 30 comprimés, soit une fourniture d'un mois à raison d'un comprimé par jour.",
+      "availableProduct": 38
+    }
+  ]
+}

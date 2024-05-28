@@ -48,7 +48,7 @@ useHead({
   }
 
   .main {
-    padding-bottom: 1rem !important;
+    padding-bottom: 1.5rem !important;
   }
 
   footer{
@@ -57,7 +57,6 @@ useHead({
     width: 100%;
     height: 2.5rem;
     background-color: $backgroundColorLighter;
-
     border-top: 2px solid $backgroundColor;
     text-align: center;
 

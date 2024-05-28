@@ -7,18 +7,16 @@ const articleContent = article.value.content;
 </script>
 
 <template>
-<section>
-    <h2 class="title">
-      {{ article['long-title'] }}
-    </h2>
-    <div class="news-header">
-    </div>
+  <section>
     <div class="news-content" >
+      <h2 class="title">
+        {{ article['long-title'] }}
+      </h2>
       <div v-for="(data, index) in articleContent">
-        <img v-show=" index === 0" :src="article['large-icon-url']" :alt="article['short-title']"/>
         <p :class="index === 0 ? null : 'news-format' " >
           {{ data }}
         </p>
+        <img v-show=" index === 0" :src="article['large-icon-url']" :alt="article['short-title']"/>
       </div>
     </div>
 </section>
@@ -27,17 +25,24 @@ const articleContent = article.value.content;
 <style scoped>
 
 img {
-  min-width: 500px;
-  max-height: 400px;
+  padding: 10px;
+  width: 40vw;
 }
 
 section {
   margin: 0 120px;
 }
 
-.news-content{
+.title {
+  width: fit-content;
+  margin: 20px auto;
+}
 
-  width: 75vw;
+.news-content{
+  font-family: "Montserrat", sans-serif;
+
+  margin: 10px auto;
+  width: 40vw;
 
   p {
     width: 100%;
@@ -45,17 +50,10 @@ section {
   }
 
   .news-format {
-    margin: 20px auto;
+    margin: 10px auto;
   }
 
-  :first-child {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: normal;
-    gap: 15px;
-  }
+
 }
 
 </style>
