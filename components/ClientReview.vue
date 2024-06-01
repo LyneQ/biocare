@@ -40,7 +40,7 @@ const avisClient = [
 </script>
 
 <template>
-  <hr style="width: 80vw; margin: 5vh auto 0;"/>
+  <hr style="margin: 2vh auto 0;"/>
 <section class="review-list">
   <div class="review" v-for=" review in avisClient">
     <h3> {{ review.fullName }} </h3>
@@ -63,7 +63,7 @@ const avisClient = [
   }
 
   .review-list {
-    width: 80vw;
+    width: fit-content;
     margin-top: 20px;
 
     display: inline-flex;
@@ -86,8 +86,6 @@ const avisClient = [
     .star, span {
       padding: 0;
       width: 25px;
-
-
     }
 
   }

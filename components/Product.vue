@@ -27,7 +27,7 @@
     <input type="button" :value="`au prix de ${props.price} €*`" />
     <label class="subTitle">*{{ props.priceDescription }} </label>
   </div>
-  <div class="review">
+  <div class="review-sec">
     <ClientReview/>
   </div>
 
@@ -97,8 +97,11 @@ $imageWidth: 200px;
 
 }
 
-.review {
-  width: fit-content;
+.review-sec {
+  $review-width: 342px;
+  //width: fit-content;
+  width: calc( $review-width * 3);
+
   margin:  0 auto;
 }
 
