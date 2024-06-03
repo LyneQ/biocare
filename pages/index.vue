@@ -12,7 +12,7 @@ const news = ref(newsJson.news.index);
     <div class="content">
       <img src="/wafton.png" alt="photo d'une de nos équipe (463)"/>
       <p>
-        Nous sommes BioCare, une société pharmaceutique basée au Luxembourg, créée par DR W. Afton.
+        Nous sommes BioCare, une société pharmaceutique basée au Listembourg, créée par DR W. Afton.
         <br/>
         Notre mission est d'améliorer votre condition de vie à travers nos produits révolutionnaires,
         dans l'espoir de vous rendre votre vitalité d'antan. Nos recherches incessantes et notre engagement envers l'innovation

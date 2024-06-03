@@ -1,4 +1,5 @@
 <script>
+
 </script>
 <template>
   <!-- crée un chargement artificiel de quelques secondes -->

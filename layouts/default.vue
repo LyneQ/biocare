@@ -1,7 +1,7 @@
 <script setup>
 useHead({
   title: `BioCare Inc`,
-  // meta: [ { name: 'description', content: 'biocare' } ],
+  meta: [ { name: 'description', content: 'biocare' } ],
 })
 </script>
 
