@@ -43,7 +43,7 @@ const inputIsValid = () => {
 
 const submitForm = () => {
   if ( inputIsValid() ) {
-    alert(`merci ${inputs.lastName} ${inputs.firstName}, votre message nous a été transmis avec succès (526)`)
+    alert(`merci ${inputs.lastName} ${inputs.firstName}, votre message nous a été transmis avec succès`)
   } else {
     alert('Veuillez remplir tout les champs de texte ayant une petite étoile');
   }

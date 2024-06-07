@@ -10,7 +10,7 @@ const news = ref(newsJson.news.index);
   <section class="main">
     <h1 class="title"> Qui sommes-nous ? </h1>
     <div class="content">
-      <img src="/wafton.png" alt="photo d'une de nos équipe (463)"/>
+      <img src="/wafton.png" alt="photo d'une de nos équipe"/>
       <p>
         Nous sommes BioCare, une société pharmaceutique basée au Listembourg, créée par DR W. Afton.
         <br/>
