@@ -40,7 +40,6 @@ const avisClient = [
 </script>
 
 <template>
-  <hr style="margin: 2vh auto 0;"/>
 <section class="review-list">
   <div class="review" v-for=" review in avisClient">
     <h3> {{ review.fullName }} </h3>
@@ -63,16 +62,19 @@ const avisClient = [
   }
 
   .review-list {
-    width: fit-content;
+    width: min-content;
     margin-top: 20px;
 
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
-    //justify-content: center;
     align-items: stretch;
     gap: 10px;
 
+    max-height: 200px;
+
+    overflow: scroll;
+    scroll-behavior: smooth;
   }
 
   .review {
@@ -80,8 +82,8 @@ const avisClient = [
 
     padding: 10px;
 
-    border: 1px solid $fontColor;
-    border-radius: 10px;
+    border-bottom: 1px solid $fontColor;
+    //border-radius: 10px;
 
     .star, span {
       padding: 0;

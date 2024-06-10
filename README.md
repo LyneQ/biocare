@@ -17,13 +17,16 @@ les ingrédients actifs, ainsi que les avertissements et les précautions d'empl
 # Réalisation
 
 Libarie et framework utilisé :
-- [nuxtJS](https://nuxt.com/)
-- [Sass](https://sass-lang.com/)
+- [nuxtJS](https://nuxt.com/) 
+- [Sass](https://sass-lang.com/) 
+- [flaticon](https://www.flaticon.com/)
+- [unsplash](https://unsplash.com/fr)
 
 Aide externe : 
+
 - [chatGPT](https://chatgpt.com/) pour le contenu du site (avis client, contenu des pages de news)
 # À faire
 
-1. améliorer l'esthétisme et le manque de contenu de `/pages/nos-soins.vue` (image, section avis client)
+1. améliorer l'esthétisme et le manque de contenu de `/pages/nos-soins.vue` (menu déroulant)
 2. trouvé une bonne image pour la section 'Qui sommes-nous ?' de `/pages/index.vue`
 3. placer le logo à gauche et les liens au centre horizontal sur `/layouts/default.vue`

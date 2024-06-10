@@ -15,21 +15,60 @@
     return props.description.replace(/\. /g, '.<br>')
   } )
 
+  let selector = reactive( {
+    description : false,
+    review      : false
+  })
+
+  const selectorState = (option) => {
+    console.log("selector state trigger")
+    switch (option) {
+      case "description":
+        selector.description = !selector.description
+        break;
+      case "review":
+        selector.review = !selector.review
+        break;
+      default:
+        console.log(`choice ${option} not found`);
+        break;
+    }
+  }
+
 </script>
 
 <template>
-  <div class="product">
-    <h2> {{ props.fullName }} </h2>
-    <div class="product-content">
-      <img :src="props.imageUrl" :alt="props.name">
-      <label v-html="productDescription"> </label>
+  <div class="panel">
+    <div class="product">
+      <h2> {{ props.fullName }} </h2>
+      <!-- image and selector -->
+      <div class="product-content">
+        <img :src="props.imageUrl" :alt="props.name" >
+<!--              <label v-html="productDescription"> </label>-->
+      </div>
+      <input type="button" :value="`au prix de ${props.price} €*`" />
+      <label class="subTitle">*{{ props.priceDescription }} </label>
     </div>
-    <input type="button" :value="`au prix de ${props.price} €*`" />
-    <label class="subTitle">*{{ props.priceDescription }} </label>
+    <!-- selector -->
+    <div class="product-selector-option">
+      <!-- description -->
+      <h4 @click="selectorState('description')">
+        <i v-show="!selector.description" class="fi fi-rr-arrow-small-down"></i>
+        <i v-show="selector.description"  class="fi fi-rr-arrow-small-up"></i> Description</h4>
+      <div v-show="selector.description" class="description" v-html="productDescription">
+      </div>
+      <!-- review -->
+      <h4 @click="selectorState('review')">
+        <i v-show="!selector.review" class="fi fi-rr-arrow-small-down"></i>
+        <i v-show="selector.review"  class="fi fi-rr-arrow-small-up"></i>
+        avis client</h4>
+      <div v-show="selector.review" class="reviews">
+        <ClientReview/>
+      </div>
+    </div>
   </div>
-  <div class="review-sec">
-    <ClientReview/>
-  </div>
+
+
 
 </template>
 
@@ -38,11 +77,14 @@
 
 $imageWidth: 200px;
 
+img {
+  width: $imageWidth;
+
+}
+
 .product {
   display: flex;
   flex-direction: column;
-
-  margin:  0 25vw;
 
   width: $imageWidth;
 
@@ -74,6 +116,7 @@ $imageWidth: 200px;
   }
 
   .subTitle {
+    padding-top: 5px;
     font-size: xx-small;
   }
 
@@ -96,13 +139,32 @@ $imageWidth: 200px;
   }
 
 }
+.panel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin:  0 0 0 25vw;
 
-.review-sec {
-  $review-width: 342px;
-  //width: fit-content;
-  width: calc( $review-width * 3);
+}
+.product-selector-option {
+  margin-top: 60px;
 
-  margin:  0 auto;
+  width: 400px;
+
+  h4 {
+    cursor: pointer;
+    width: 400px;
+
+    margin: 0 0 10px 0;
+    padding: 10px 0;
+
+    border-bottom: 1px solid darkgray;
+  }
+
+  .description, .review {
+      padding-left: 15px;
+    }
 }
 
 </style>
