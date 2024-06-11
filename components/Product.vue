@@ -52,16 +52,19 @@
     <!-- selector -->
     <div class="product-selector-option">
       <!-- description -->
-      <h4 @click="selectorState('description')">
+      <div class="selector-title" @click="selectorState('description')">
+      <h4>Description</h4>
         <i v-show="!selector.description" class="fi fi-rr-arrow-small-down"></i>
-        <i v-show="selector.description"  class="fi fi-rr-arrow-small-up"></i> Description</h4>
+        <i v-show="selector.description"  class="fi fi-rr-arrow-small-up"></i>
+      </div>
       <div v-show="selector.description" class="description" v-html="productDescription">
       </div>
       <!-- review -->
-      <h4 @click="selectorState('review')">
+      <div class="selector-title" @click="selectorState('review')">
+        <h4>avis client</h4>
         <i v-show="!selector.review" class="fi fi-rr-arrow-small-down"></i>
         <i v-show="selector.review"  class="fi fi-rr-arrow-small-up"></i>
-        avis client</h4>
+      </div>
       <div v-show="selector.review" class="reviews">
         <ClientReview/>
       </div>
@@ -147,6 +150,7 @@ img {
   margin:  0 0 0 25vw;
 
 }
+
 .product-selector-option {
   margin-top: 60px;
 
@@ -156,10 +160,24 @@ img {
     cursor: pointer;
     width: 400px;
 
-    margin: 0 0 10px 0;
+    margin: 0;
     padding: 10px 0;
+  }
+
+  .selector-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 
     border-bottom: 1px solid darkgray;
+
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
   }
 
   .description, .review {
